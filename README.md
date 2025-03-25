@@ -1,2 +1,2 @@
 # Logger
-My super logger library.
+My super logger library written in C++.
