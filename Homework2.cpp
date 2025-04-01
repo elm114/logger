@@ -3,9 +3,11 @@
 
 
 enum LoggingLevel {
-    INFO = 0,
-    DEBUG = 1,
-    ERROR = 2
+    DEBUG,
+    INFO,
+    WARN,
+    ERROR,
+    FATAL
 };
 
 class LoggerException : public std::exception{
@@ -39,13 +41,19 @@ private:
     std::string getLogLevelString(LoggingLevel level) const {
 
         if (level == 0){
-            return "INFO";
-        }
-        else if (level == 1){
             return "DEBUG";
         }
+        else if (level == 1){
+            return "INFO";
+        }
         else if (level == 2) {
-            return "ERROR";
+            return "WARN";
+        }
+        else if (level == 3){
+            return "ERORR";
+        }
+        else if (level == 4){
+            return "FATAL";
         }
         else {
             return "UNKOWN";
@@ -67,7 +75,8 @@ public:
         logger.print(LoggingLevel::INFO, "Application is starting...");
         logger.print(LoggingLevel::DEBUG, "Low memory debuging...");
         logger.print(LoggingLevel::ERROR, "Critical error encountered!");
-        logger.print(LoggingLevel::INFO, "");
+        logger.print(LoggingLevel::WARN, "WARING! WARING!");
+        logger.print(LoggingLevel::FATAL, "it's FATAL");
     }
 
     catch (const LoggerException& e) {
