@@ -1,0 +1,8 @@
+2025-04-22 01:32:41.230 | INFO     | __main__:main:20 - App started
+2025-04-22 01:32:41.232 | DEBUG    | __main__:divide:7 - Called divide(a=10, b=2)
+2025-04-22 01:32:41.232 | INFO     | __main__:divide:10 - Division successful: 5.0
+2025-04-22 01:32:41.233 | DEBUG    | __main__:divide:7 - Called divide(a=10, b=0)
+2025-04-22 01:32:41.233 | ERROR    | __main__:divide:13 - Cannot divide by zero
+2025-04-22 01:32:41.233 | DEBUG    | __main__:divide:7 - Called divide(a=10, b=2)
+2025-04-22 01:32:41.234 | ERROR    | __main__:divide:16 - Unexpected error: unsupported operand type(s) for /: 'str' and 'int'
+2025-04-22 01:32:41.234 | INFO     | __main__:main:26 - App finished
