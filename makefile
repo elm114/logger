@@ -1,5 +1,5 @@
 all:
-    g++ -std=c++17 Logger.cpp -o Logger
+  g++ -std=c++17 Logger.cpp -o Logger
 
 clean:
 	rm Logger
