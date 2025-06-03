@@ -7,4 +7,4 @@ test:
 	./LoggerTest
 
 clean:
-	rm Logger
+	rm Logger LoggerTest
